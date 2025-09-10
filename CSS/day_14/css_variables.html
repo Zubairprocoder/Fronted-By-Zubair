@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Variables</title>
+    <style>
+      :root {
+        --primary: rgb(189, 11, 201);
+        --secondary: rgb(0, 255, 47);
+        --thirdy: rgb(199, 14, 14);
+        --four: violet;
+        --depad: 12px;
+        --demad: 17px;
+      }
+      .box {
+        width: 30vw;
+        height: 20vh;
+        border: 3px solid black;
+        border-radius: 6px;
+        margin: var(--demad);
+        padding: var(--depad);
+      }
+      .box1 {
+        background-color: var(--primary);
+      }
+      .box2 {
+        background-color: var(--secondary);
+      }
+      .box3 {
+        background-color: var(--thirdy);
+      }
+      .box4 {
+        background-color: violet;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Variables Properties</h1>
+    <div class="container">
+      <div class="box box1"></div>
+      <div class="box box2"></div>
+      <div class="box box3"></div>
+      <div class="box box4"></div>
+    </div>
+  </body>
+</html>

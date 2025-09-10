@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors MasterClass</title>
+  </head>
+  <style>
+    /* Universal Selectors  */
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+    /* Group Selectors */
+    span,
+    strong,
+    b {
+      color: black;
+      background-color: green;
+    }
+    /* Class Selectors */
+    .para {
+      background-color: chocolate;
+    }
+    #line {
+      color: yellow;
+    }
+    /* descendant Selectors */
+    .parent p {
+      background-color: violet;
+    }
+    /* child Selectors */
+    .parent > strong {
+      color: blue;
+    }
+    /* Adjancent Sibling Selectors */
+    h1 + div {
+      border: 2px solid green;
+    }
+    /* General Sibling Selectors */
+    p ~ b {
+      padding: 12px;
+      border: 3px sienna black;
+    }
+    /* attribute Selectors */
+    [title] {
+      background-color: violet;
+    }
+    /* attribute titles selectors */
+    [title="hello"] {
+      color: blue;
+      text-align: center;
+    }
+    /* Psesudo Classes */
+    /* mouse hover */
+    h1:hover {
+      padding: 6px;
+    }
+    /* input focus */
+    input:focus {
+      padding: 12px;
+    }
+    a {
+      color: black;
+    }
+    /* active links */
+    a:active {
+      color: blue;
+    }
+    /* nth child selectors */
+    ul li:nth-child(2) {
+      color: crimson;
+    }
+    /* first selectors */
+    ul li:first-child {
+      color: blue;
+    }
+    /* last child */
+    ul li:last-child {
+      background-color: violet;
+    }
+    /* Before Selectors */
+    ul::before{
+      content: "Zubair is a programmer.";
+      color: white;
+      background-color: blue;
+    }
+    /* After Selectors */
+    ul::after{
+      content: "Zubair is a freelancer.";
+      color: black;
+      background-color: slateblue;
+    }
+    /* first letter */
+    ul li::first-letter{
+    text-transform: capitalize;
+    color: blue;
+    }
+    /* first line  */
+    p::first-line{
+      background-color: black;
+      color: white;
+    }
+  </style>
+  <body>
+    <h1 title="hello">CSS Selectors MasterClass 🥰💝</h1>
+    Elements Selectors
+    <div class="para">Class Selectors</div>
+    <p id="line">Id Selectors</p>
+    <div class="parent">
+      <span>Zubair</span>
+      <strong>Freelancer</strong>
+      <b>Fronted developer</b>
+      <p>Zubair is a freel;ancer is programmer.</p>
+    </div>
+    <form action="">
+      <input type="text" placeholder="Enter your name" />
+      <p><a href="www.facebook.com">facebook</a></p>
+    </form>
+    <ul>
+      <li>Zubair</li>
+      <li>Freelancer</li>
+      <li>Programmer</li>
+      <li>Coder</li>
+      <li>freelancing</li>
+    </ul>
+    <p>
+      zubair is a freelancer . zubair is a programmer. zubair is a web
+      delevloper.zubair is a freelancer . zubair is a programmer. zubair is a
+      web delevloper.
+    </p>
+  </body>
+</html>

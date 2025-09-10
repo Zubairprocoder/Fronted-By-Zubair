@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Box Model</title>
+    <style>
+      .parent {
+        border: 3px solid green;
+        padding: 8px;
+        border-radius: 5px;
+        width: 20vw;
+        margin: 6px;
+        box-sizing: border-box;
+      }
+      /* margin collbas */
+      .box1 {
+        width: 40vw;
+        height: 20vh;
+        border: 2px solid blue;
+        border-radius: 6px;
+        margin: 50px;
+      }
+      .box2 {
+        width: 40vw;
+        height: 20vh;
+        border: 2px solid blue;
+        border-radius: 6px;
+        margin: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Box Model</h1>
+    <div class="parent">
+      <p>
+        zubair is a freelancer . zubair is a programmer. zubair is a web
+        delevloper.
+      </p>
+      <ul>
+        <li>zubair</li>
+        <li>freelancer</li>
+        <li>programmer</li>
+        <li>web delevloper</li>
+      </ul>
+    </div>
+    <div>
+      <div class="box1"></div>
+      <div class="box2"></div>
+    </div>
+  </body>
+</html>

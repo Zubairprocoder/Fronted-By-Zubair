@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Animation</title>
+    <style>
+      .container {
+        height: 80vh;
+        width: 40vw;
+        background-color: aqua;
+      }
+      .box {
+        width: 10vw;
+        height: 10vh;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+        /* animation: ZubairKaAnimation;
+        animation-duration: 4s;
+        animation-iteration-count: 2;
+        animation-delay: 1s;
+        animation-direction: alternate-reverse;
+        animation-play-state: paused; */
+        animation: ZubairKaAnimation 4s ease-in-out 1s forwards,Zubair2 3s ease-in-out 2;
+      }
+      @keyframes ZubairKaAnimation {
+        from {
+          background-color: green;
+        }
+        to {
+          background-color: violet;
+          transform: translateX(700px);
+        }
+      }
+      @keyframes Zubair2 {
+        0%{
+            transform: rotate(100deg);
+        }
+        20%{
+            transform: rotate(200deg);
+        }
+        50%{
+            transform: rotate(350deg);
+        }
+        80%{
+            transform: rotate(380deg);
+        }
+        100%{
+            transform: rotate(400deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Animation</h1>
+    <div class="container">
+      <div class="box"></div>
+    </div>
+  </body>
+</html>

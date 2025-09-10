@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Sizing Units</title>
+    <style>
+      /* Absolute Units */
+      p {
+        font-size: 24px;
+      }
+      span {
+        font-size: 2cm;
+      }
+      /* Relative Units */
+      .parent div:first-child {
+        font-size: 1em;
+      }
+      .parent div:nth-child(2){
+        font-size: 1.7rem;
+      }
+      .parent div:nth-child(3){
+        font-size: 100%;
+      }
+      .parent div:nth-child(4){
+        font-size: 4vh;
+      }
+      .parent div:last-child{
+        font-size: 3vw;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Sizing Units</h1>
+    <!-- Absolute Units -->
+    <p>Zubair is a freelancer.</p>
+    <span>freelancer</span>
+    <!-- Relative Units -->
+    <div class="parent">
+      <div>Zubair is a fronted developer</div>
+      <div>Zubair is a backend developer</div>
+      <div>Zubair is a full stack developer</div>
+      <div>Zubair is a  web developer</div>
+      <div>Zubair is a programmer.</div>
+      <div>Zubair is a freelancer</div>
+    </div>
+  </body>
+</html>

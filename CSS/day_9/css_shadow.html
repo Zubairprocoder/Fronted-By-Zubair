@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Shadows & Outlines</title>
+    <style>
+      /* Text Shadows */
+      h1 {
+        text-align: center;
+        text-shadow: 1px 11px rgb(222 66 153 / 69%);
+      }
+      /* Box Shadows */
+      .box {
+        width: 20vw;
+        height: 15vh;
+        box-shadow: 3px 3px 11px blue;
+        border: 3px solid black;
+        border-radius: 5px;
+        text-align: center;
+      }
+      /* Outline Shadows */
+      .box {
+        outline: green solid 3px;
+        outline-offset: 7px;
+        margin-left: 3vw;
+      }
+      /* Outline shorthand */
+      .btn:focus {
+        outline: 2px solid #3b82f6;
+        outline-offset: 2px;
+      }
+
+      /* Separate props */
+      .input:focus-visible {
+        outline-color: #10b981;
+        outline-style: solid;
+        outline-width: 3px;
+        outline-offset: 3px;
+      }
+
+      /* Remove default outline (phir custom zaroor do) */
+      .link:focus {
+        outline: none;
+      }
+      .link:focus-visible {
+        outline: 2px dashed #ef4444;
+        outline-offset: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Shadows & Outlines</h1>
+    <div class="box">
+      <p>Zubair Freelancer</p>
+    </div>
+    <form action="">
+      <input type="text" placeholder="Enter your email" />
+      <a href="www.google.com">google</a>
+      <button class="btn">Submit</button>
+    </form>
+  </body>
+</html>

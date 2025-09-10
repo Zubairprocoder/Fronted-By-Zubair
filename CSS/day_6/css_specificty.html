@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Specificity Cascade</title>
+    <style>
+      #id {
+        color: black;
+      }
+      /* Class 10 */
+      .class {
+        background-color: aqua;
+      }
+      /* attribute class 10 */
+      title[hello] {
+        background-color: violet;
+      }
+      .class:hover {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- inline css 1000 -->
+    <h1 style="text-align: center">CSS Specificity Cascade</h1>
+    <!-- id class 100 -->
+    <div id="id">Zubair is a freelancer.</div>
+    <!-- class , Attribute , Pseudo-class 10 -->
+    <p class="class">Zubair is a programmer.</p>
+    <div title="hello">Zubair is a fronted developer.</div>
+    <span>Zubair is backend developer.</span>
+  </body>
+</html>

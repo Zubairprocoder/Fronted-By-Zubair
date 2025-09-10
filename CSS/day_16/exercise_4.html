@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Exercise</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      :root {
+        --primary: rgb(210, 14, 213);
+        --secondary: rgb(218, 14, 52);
+        --Four: rgb(15, 209, 24);
+        --Thirdy: rgb(50, 12, 204);
+      }
+      nav {
+        background-color: aqua;
+        padding: 12px;
+      }
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: center;
+        gap: 23px;
+      }
+      li {
+        padding: 12px;
+        border-radius: 8px;
+      }
+      ul li {
+        list-style: none;
+      }
+      li:nth-child(1) {
+        background-color: var(--primary);
+      }
+      li:nth-child(2) {
+        background-color: var(--secondary);
+      }
+      li:nth-child(3) {
+        background-color: var(--Thirdy);
+        color: white;
+      }
+      li:nth-child(4) {
+        background-color: var(--Four);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+          <li>Help</li>
+        </ul>
+      </nav>
+    </header>
+  </body>
+</html>

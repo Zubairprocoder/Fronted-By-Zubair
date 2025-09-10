@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Flexbox</title>
+    <style>
+      .container {
+        border: 2px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        /* flex-direction: column; */
+        /* flex-wrap: wrap; */
+        /* align-content: center; jb ak zada line ho tu ya content center kr ta ha */
+        /* flex-flow: column wrap; flex-direction and flex-wrap  dona ak sath use hota ha */
+        gap: 12px 23px; /* row and column gap ak sath */
+      }
+      .item {
+        width: 55px;
+        height: 35px;
+        background-color: violet;
+        border: 2px solid blue;
+        /* flex-grow: 1; */
+      }
+      .items-1 {
+        /* flex-grow: 5; */
+        flex-shrink: 3;
+        align-self: self-start;
+      }
+      /* .items-1{
+        order: 1;
+      }
+      .items-2{
+        order: 2;
+      }
+      .items-3{
+        order: 3;
+      }
+      .items-4{
+        order: 4;
+      }*/
+      .items-5 {
+        /* order: 5; */
+        align-self: flex-end;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="item items-1">1</div>
+        <div class="item items-2">2</div>
+        <div class="item items-3">3</div>
+        <div class="item items-4">4</div>
+        <div class="item items-5">5</div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lists Style in CSS</title>
+    <style>
+      ul li {
+        list-style: none;
+        list-style-type: square;
+        list-style-position: inside;
+        /* background-color: violet; */
+        /* list-style-image: url(/backend.jpg); */
+      }
+      ul li::marker {
+        color: red; /* marker ka color */
+        font-size: 20px; /* size bara */
+        content: "👉 "; /* apna custom marker */
+      }
+      ol {
+        list-style: none; /* default bullet hatao */
+        padding-left: 0;
+        margin-left: 12px;
+      }
+
+      ol li::marker {
+        content: "✔"; /* custom symbol */
+        color: green;
+        margin-right: 8px;
+        padding: 12px;  
+        font-size: 20px;
+
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lists Style in CSS</h1>
+    <strong>Unordered Lists</strong>
+    <ul>
+      <li>Name</li>
+      <li>Age</li>
+      <li>Skills</li>
+      <li>Eduaction</li>
+    </ul>
+    <strong>ordered Lists</strong>
+    <ol>
+      <li>Zubair</li>
+      <li>18</li>
+      <li>Programmer</li>
+      <li>12th</li>
+    </ol>
+  </body>
+</html>

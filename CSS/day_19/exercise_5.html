@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 5 In CSS</title>
+    <style>
+      body {
+        background-color: black;
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      header {
+        position: sticky;
+        top: 0px;
+      }
+      nav {
+        background-color: violet;
+        padding: 8px;
+      }
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 23px;
+      }
+      ul li {
+        list-style: none;
+        width: 10vw;
+        text-align: center;
+        padding: 8px;
+        background-color: aqua;
+        margin: 6px;
+        border-radius: 6px;
+        font-weight: 600;
+        color: white;
+      }
+      li:nth-child(1) {
+        background-color: aqua;
+        color: blue;
+      }
+      li:nth-child(2) {
+        background-color: blue;
+      }
+      li:nth-child(3) {
+        background-color: blueviolet;
+      }
+      li:nth-child(4) {
+        background-color: green;
+      }
+      .container {
+        background-color: green;
+        width: 100%;
+        height: 100vh;
+      }
+      .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .box {
+        width: 40vw;
+        height: 60vh;
+        border-radius: 6px;
+        background-color: burlywood;
+      }
+      .box:nth-child(2) {
+        background-color: rgba(13, 13, 212, 0.812);
+      }
+      .cards {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 16px auto;
+        position: relative;
+      }
+      .boxcard {
+        border: 2px solid whitesmoke;
+        border-radius: 24px;
+        padding: 20px;
+        color: white;
+        font-weight: 400;
+        font-size: 18px;
+      }
+      footer {
+        background: linear-gradient(135deg, #1d3557, #457b9d);
+        color: #fff;
+        padding: 40px 20px;
+        text-align: center;
+      }
+      .boxyellow {
+        border: none;
+        border-radius: 100%;
+        background-color: #ffb703;
+        width: 5vw;
+        height: 8vh;
+        position: absolute;
+        top: 0;
+        right: 12px;
+      }
+      .footer-nav {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+      }
+
+      .footer-nav li a {
+        text-decoration: none;
+        color: #f1faee;
+        font-size: 18px;
+        font-weight: 600;
+        transition: color 0.3s ease, border-bottom 0.3s ease;
+        padding-bottom: 3px;
+      }
+      .footer-nav li a:first-child {
+        color: black;
+      }
+      .footer-nav li a:hover {
+        color: #ffb703;
+        border-bottom: 2px solid #ffb703;
+      }
+
+      .footer-bottom {
+        margin-top: 25px;
+        font-size: 14px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Contact</li>
+          <li>Help</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+      <div class="cards">
+        <div class="boxyellow"></div>
+        <div class="boxcard">
+          Welcome to this Sigma Web Developement Express
+        </div>
+      </div>
+    </main>
+    <footer>
+      <ul class="footer-nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
+      <div class="footer-bottom">
+        © 2025 Zubair Pro Coder | All Rights Reserved
+      </div>
+    </footer>
+  </body>
+</html>

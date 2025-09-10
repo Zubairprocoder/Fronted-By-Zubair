@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>More CSS Selectors</title>
+    <style>
+      .boxes * {
+        border: 2px solid black;
+        padding: 12px;
+        border-radius: 6px;
+        margin: 6px auto;
+        background-color: violet;
+        color: white;
+      }
+      [data-color="primary"] {
+        margin-top: 12px;
+      }
+      .box:nth-child(odd) {
+        background-color: aqua;
+        color: blue;
+      }
+      .box:nth-child(even) {
+        background-color: darkorchid;
+        color: white;
+      }
+      .box:nth-last-child(1) {
+        background-color: yellow;
+        color: black;
+      }
+      .boxes::before {
+        content: "Zubair is a freelancer.";
+        color: blue;
+      }
+      .boxes::after {
+        content: "Zubair is a porgrammer.";
+        color: violet;
+      }
+      ::selection {
+        background-color: violet;
+        color: white;
+      }
+      input:placeholder-shown {
+        color: white;
+        background-color: wheat;
+        width: 97%;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>More CSS Selectors</h1>
+    <div class="boxes">
+      <div class="box" data-color="primary">Hey I am hacker.</div>
+      <div class="box">Hey I am hacker.</div>
+      <div class="box">Hey I am hacker.</div>
+      <div class="box">Hey I am hacker.</div>
+      <div class="box">Hey I am hacker.</div>
+      <input type="text" placeholder="Your Enter Username" />
+    </div>
+  </body>
+</html>
