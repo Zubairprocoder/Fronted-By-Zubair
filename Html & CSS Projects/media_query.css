@@ -1,0 +1,144 @@
+/* ✅ Mobile Devices (0px - 576px) */
+@media (max-width: 576px) {
+  header {
+    height: 55vh;
+    top: 50%;
+  }
+  nav {
+    padding: 12px 20px;
+  }
+
+  nav img {
+    width: 80px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  article h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .email-box input {
+    width: 80vw;
+    font-size: 14px;
+  }
+
+  .email-box button {
+    width: 80vw;
+  }
+
+  .images {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .cards {
+    width: 100%;
+  }
+
+  .card {
+    height: 25vh;
+    padding: 16px;
+  }
+  .end p {
+    font-size: 12px;
+  }
+
+  .ques-card {
+    gap: 10px;
+    padding: 12px;
+  }
+}
+
+/* ✅ Tablet Devices (577px - 992px) */
+@media (min-width: 577px) and (max-width: 992px) {
+  header {
+    height: 45vh;
+  }
+  nav {
+    padding: 16px 30px;
+  }
+
+  .btn {
+    font-size: 15px;
+    padding: 10px 14px;
+  }
+
+  article h2 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .email-box input {
+    width: 70vw;
+  }
+
+  .images {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .cards {
+    width: 90%;
+  }
+
+  .card {
+    height: 20vh;
+    padding: 18px;
+  }
+
+  .ques-card {
+    padding: 16px 20px;
+  }
+
+  .footer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ✅ Desktop Devices (993px and above) */
+@media (min-width: 993px) {
+  header {
+    height: 80vh;
+  }
+  article {
+    top: 50%;
+  }
+  nav {
+    padding: 20px 40px;
+    justify-content: space-around;
+  }
+
+  article h2 {
+    font-size: 32px;
+  }
+
+  .email-box input {
+    width: 50vw;
+  }
+
+  .images {
+    flex-direction: row;
+  }
+
+  .cards {
+    width: 80%;
+  }
+
+  .card {
+    height: 20vh;
+  }
+
+  .ques-card {
+    padding: 20px 34px;
+  }
+
+  .footer {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
