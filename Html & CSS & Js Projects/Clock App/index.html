@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js Clock Projects</title>
+    <style>
+      body {
+        background-color: violet;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: sans-serif;
+        text-align: center;
+      }
+      .clock-container {
+        text-align: center;
+        font-size: 48px;
+        font-weight: 700;
+        border-radius: 14px;
+        padding: 10px 20px;
+        background-color: blue;
+      }
+      .clock {
+        letter-spacing: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clock-container">
+      <div class="clock">00:00</div>
+    </div>
+    <script>
+      setInterval(() => {
+        let element = document.querySelector(".clock");
+        let time = new Date();
+        const format = {
+          timezone: "Asia/Karachi",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: true,
+        };
+        element.textContent = time.toLocaleTimeString("eng-Us", format);
+      }, 1000);
+    </script>
+  </body>
+</html>

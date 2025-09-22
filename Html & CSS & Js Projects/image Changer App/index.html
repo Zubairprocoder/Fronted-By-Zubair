@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Changer App</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: violet;
+        color: #fff;
+        font-family: sans-serif;
+        text-align: center;
+      }
+      .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        align-content: center;
+        gap: 10vw;
+        margin-top: 5vw;
+        cursor: pointer;
+      }
+      .image-container img {
+        cursor: pointer;
+        border: 8px solid blue;
+        border-radius: 10px;
+        width: 50vw;
+        margin: auto;
+        transition: transform 0.4s ease-in;
+      }
+      img:hover {
+        transform: scale(1.1);
+      }
+      h2 {
+        padding: 8px 12px;
+        border: none;
+        border-radius: 10px;
+        background-color: yellow;
+        font-size: 24px;
+        font-weight: 800;
+        color: black;
+      }
+      @media screen and (max-width: 575px) {
+        .image-container img {
+          width: 70vw;
+          margin: auto;
+        }
+        .image-container {
+          height: 60vh;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Image Changer App</h1>
+    <div class="image-container">
+      <img
+        src="https://cdn.pixabay.com/photo/2024/01/21/12/37/chiemsee-lake-8523044_1280.jpg"
+        alt="jingle"
+        width="550"
+      />
+      <h2>London</h2>
+    </div>
+    <script>
+      let img = document.querySelector("img");
+      let h2 = document.querySelector("h2");
+      let pre_src = img.src;
+      let pre_text = h2.innerText;
+      const images = [
+        "/media/img (1).jpg",
+        "/media/img (2).jpg",
+        "/media/img (3).jpg",
+        "/media/img (4).jpg",
+        "/media/img (5).jpg",
+        "/media/img (6).jpg",
+        "/media/img (7).jpg",
+        "/media/img (8).jpg",
+        "/media/img (9).jpg",
+        "/media/img (10).jpg",
+        "/media/img (11).jpg",
+        "/media/img (12).jpg",
+        "/media/img (13).jpg",
+        "/media/img (14).jpg",
+        "/media/img (15).jpg",
+        "/media/img (16).jpg",
+        "/media/img (17).jpg",
+        "/media/img (18).jpg",
+        "/media/img (19).jpg",
+      ];
+      const texts = ["New York City", "Paris", "London", "Tokyo", "Toronto"];
+
+      const borders = ["red", "blue", "green", "purple", "orange"];
+      img.addEventListener("mouseover", () => {
+        let randIamges = images[Math.floor(Math.random() * images.length)];
+        let randText = texts[Math.floor(Math.random() * texts.length)];
+        let randBorder = borders[Math.floor(Math.random() * borders.length)];
+        img.src = randIamges;
+        h2.innerText = randText;
+        img.style.border = `10px solid ${randBorder}`;
+      });
+      img.addEventListener("click", () => {
+        let randIamges = images[Math.floor(Math.random() * images.length)];
+        let randText = texts[Math.floor(Math.random() * texts.length)];
+        let randBorder = borders[Math.floor(Math.random() * borders.length)];
+        img.src = randIamges;
+        h2.innerText = randText;
+        img.style.border = `10px solid ${randBorder}`;
+      });
+      img.addEventListener("mouseleave", () => {
+        img.src = pre_src;
+        h2.innerText = pre_text;
+        img.style.border = "10px solid blue";
+      });
+    </script>
+  </body>
+</html>
