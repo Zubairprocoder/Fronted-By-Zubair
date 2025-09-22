@@ -47,6 +47,11 @@ nav {
 
 nav img {
   width: 100px;
+  transition: transform 0.8s ease-in;
+}
+
+nav img:hover {
+  transform: scale(1.2);
 }
 
 .btn {
@@ -58,6 +63,10 @@ nav img {
   font-weight: 500;
   font-size: 16px;
   cursor: pointer;
+  transition: transform 0.4s ease-in;
+}
+.btn:hover {
+  transform: scale(1.1);
 }
 article {
   display: flex;
@@ -112,9 +121,11 @@ article h2 {
   border: none;
   cursor: pointer;
   border-radius: 5px;
+  transition: transform 0.4s ease-in;
 }
 
 .email-box button:hover {
+  transform: scale(1.1);
   background: darkred;
 }
 .sec-1 {
@@ -135,6 +146,10 @@ article h2 {
 }
 .images img {
   border-radius: 5px;
+  transition: transform 0.4s ease-in;
+}
+.images img:hover {
+  transform: scale(1.1);
 }
 .images img::before {
   content: "1";
@@ -152,6 +167,7 @@ article h2 {
   gap: 12px;
   margin: auto;
 }
+
 .card {
   background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
   border-radius: 9px;
@@ -159,6 +175,7 @@ article h2 {
   width: 95%;
   position: relative;
 }
+
 .sec-2 h3 {
   padding: 12px;
   margin-left: 23px;
@@ -225,6 +242,10 @@ li:nth-child(2) {
   background-color: #5858589e;
   width: 95%;
   padding: 16px 34px;
+  transition: transform 0.4s ease-out;
+}
+.ques-card:hover {
+  transform: scale(0.8);
 }
 .ques-card p {
   font-size: 18px;
@@ -260,6 +281,11 @@ footer h3 {
 }
 .footer a {
   color: rgba(255, 255, 255, 0.7);
+  transition: transform 0.4s ease-in;
+}
+.footer p a:hover {
+  transform: scale(1.2);
+  color: yellow;
 }
 .a-end {
   display: flex;

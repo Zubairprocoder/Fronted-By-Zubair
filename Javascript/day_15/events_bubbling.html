@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events Bubblings in js</title>
+    <style>
+      * {
+        border-radius: 4px;
+      }
+      .child {
+        border: 2px solid black;
+        border-radius: 5px;
+        padding: 12px;
+        margin: 12px;
+        background-color: aqua;
+        cursor: pointer;
+      }
+      .childcontainer {
+        padding: 12px;
+        margin: 12px;
+        background-color: blue;
+        cursor: pointer;
+      }
+      .container {
+        padding: 12px;
+        margin: 12px;
+        background-color: violet;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Events Bubblings in js</h1>
+    <div class="container">
+      <section class="childcontainer">
+        <div class="child">I am child</div>
+      </section>
+    </div>
+    <script>
+      document.querySelector(".child").addEventListener("click", (e) => {
+        e.stopPropagation();
+        alert("Child was clicked.!");
+      });
+      document
+        .querySelector(".childcontainer")
+        .addEventListener("click", (e) => {
+          e.stopPropagation();
+          alert("childcontainer was clicked.!");
+        });
+      document.querySelector(".container").addEventListener("click", () => {
+        alert("container was clicked.!");
+      });
+      function getRandomColor(params) {
+        let val1 = Math.ceil(0 + Math.random() * 255);
+        let val2 = Math.ceil(0 + Math.random() * 255);
+        let val3 = Math.ceil(0 + Math.random() * 255);
+        return `rgb(${val1},${val2},${val3})`;
+      }
+    //   let a = setInterval(() => {
+    //     document.querySelector(".childcontainer").style.backgroundColor =
+    //       getRandomColor();
+    //   }, 3000);
+    //   console.log(a);
+      let a = setTimeout(() => {
+        document.querySelector(".childcontainer").style.backgroundColor =
+          getRandomColor();
+      }, 3000);
+      console.log(a);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 13 solution in js</title>
+    <style>
+      .card {
+        display: flex;
+        border: 2px solid black;
+        border-radius: 4px;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        margin: 8px;
+        padding: 3px;
+      }
+      .card .image {
+        position: relative;
+      }
+      .text,
+      h1,
+      p {
+        padding: 2px 0;
+      }
+      .capsule {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 10;
+        background-color: rgba(0, 0, 0, 0.899);
+        color: white;
+        font-weight: 800;
+        border: none;
+        padding: 5px;
+        border-radius: 4px;
+      }
+      .image img {
+        border: none;
+        border-radius: 4px;
+        width: 230px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Exercise 13 solution in js</h1>
+    <div class="container">
+      <div class="card">
+        <div class="image">
+          <img src="/thumbnail.png" alt="youtube" width="230" />
+          <div class="capsule">31:06</div>
+        </div>
+        <div class="text">
+          <h1>Introduction to backend | Sigma Web Developement #2</h1>
+          <p>codewithzubair . 727K views . 2 months ago</p>
+        </div>
+      </div>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>
