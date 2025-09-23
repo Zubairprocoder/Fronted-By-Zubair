@@ -37,7 +37,8 @@
       img:hover {
         transform: scale(1.1);
       }
-      h2 {
+      h2,
+      button {
         padding: 8px 12px;
         border: none;
         border-radius: 10px;
@@ -46,6 +47,17 @@
         font-weight: 800;
         color: black;
       }
+      button {
+        background-color: green;
+        color: #fff;
+        cursor: pointer;
+        padding: 9px 24px;
+        transition: transform 0.4s ease-in;
+      }
+      button:hover {
+        transform: scale(1.1);
+      }
+
       @media screen and (max-width: 575px) {
         .image-container img {
           width: 70vw;
@@ -66,52 +78,82 @@
         width="550"
       />
       <h2>London</h2>
+      <button>Next ⏩</button>
     </div>
     <script>
       let img = document.querySelector("img");
       let h2 = document.querySelector("h2");
+      let btn = document.querySelector("button");
       let pre_src = img.src;
       let pre_text = h2.innerText;
-      const images = [
-        "/media/img (1).jpg",
-        "/media/img (2).jpg",
-        "/media/img (3).jpg",
-        "/media/img (4).jpg",
-        "/media/img (5).jpg",
-        "/media/img (6).jpg",
-        "/media/img (7).jpg",
-        "/media/img (8).jpg",
-        "/media/img (9).jpg",
-        "/media/img (10).jpg",
-        "/media/img (11).jpg",
-        "/media/img (12).jpg",
-        "/media/img (13).jpg",
-        "/media/img (14).jpg",
-        "/media/img (15).jpg",
-        "/media/img (16).jpg",
-        "/media/img (17).jpg",
-        "/media/img (18).jpg",
-        "/media/img (19).jpg",
-      ];
-      const texts = ["New York City", "Paris", "London", "Tokyo", "Toronto"];
 
-      const borders = ["red", "blue", "green", "purple", "orange"];
-      img.addEventListener("mouseover", () => {
-        let randIamges = images[Math.floor(Math.random() * images.length)];
+      const images = [
+        "https://cdn.pixabay.com/photo/2018/01/12/11/55/london-3078109_1280.jpg",
+        "https://cdn.pixabay.com/photo/2021/04/23/06/30/manarola-6200837_1280.jpg",
+        "https://cdn.pixabay.com/photo/2020/03/23/12/17/moscow-4960700_1280.jpg",
+        "https://cdn.pixabay.com/photo/2020/02/24/12/56/lisbon-4876136_1280.jpg",
+        "https://cdn.pixabay.com/photo/2019/08/01/11/57/gaztelugatxe-4377342_1280.jpg",
+        "https://cdn.pixabay.com/photo/2018/08/16/08/39/hallstatt-3609863_1280.jpg",
+        "https://cdn.pixabay.com/photo/2017/12/18/09/54/lago-di-limides-3025780_1280.jpg",
+        "https://cdn.pixabay.com/photo/2017/12/28/08/18/arch-of-constantine-3044634_1280.jpg",
+        "https://cdn.pixabay.com/photo/2017/12/16/22/22/bora-bora-3023437_1280.jpg",
+        "https://cdn.pixabay.com/photo/2017/12/16/01/42/madrid-3021998_1280.jpg",
+        "https://cdn.pixabay.com/photo/2017/12/15/22/25/hamburg-3021820_1280.jpg",
+        "https://cdn.pixabay.com/photo/2017/12/15/14/03/new-zealand-3021090_1280.jpg",
+        "https://cdn.pixabay.com/photo/2017/12/12/11/17/golden-gate-bridge-3014450_1280.jpg",
+        "https://cdn.pixabay.com/photo/2017/12/11/16/39/sankt-petersburg-3012671_1280.jpg",
+        "https://cdn.pixabay.com/photo/2017/12/11/10/58/lago-federa-3011939_1280.jpg",
+      ];
+      const texts = [
+        "Sunrise Over Mountain",
+        "Forest Path",
+        "Ocean Wave",
+        "City Skyline",
+        "Flower Closeup",
+        "Desert Dunes",
+        "Night Stars",
+        "Autumn Leaves",
+        "Winter Snow",
+        "Sunflower Field",
+        "Waterfall Stream",
+        "Foggy Forest",
+        "Tropical Beach",
+        "Iceberg",
+        "Wild Animals",
+        "Lake Reflection",
+        "Rocky Cliff",
+        "Starry Milky Way",
+        "Hot Air Balloon",
+        "City Night Lights",
+        "Flower Garden",
+        "Mountain Lake",
+        "Rainforest",
+        "Ancient Ruins",
+        "Bridge Over Water",
+        "Colorful Festival",
+        "Butterfly Macro",
+        "Sunset Beach",
+        "Snowy Mountain",
+        "Fog Over Lake",
+      ];
+
+      const borders = ["red", "green", "yellow", "purple", "orange"]; // yeh tumhe add karna hoga
+
+      function changeRandom() {
+        let randImage = images[Math.floor(Math.random() * images.length)];
         let randText = texts[Math.floor(Math.random() * texts.length)];
         let randBorder = borders[Math.floor(Math.random() * borders.length)];
-        img.src = randIamges;
+        img.src = randImage;
         h2.innerText = randText;
         img.style.border = `10px solid ${randBorder}`;
-      });
-      img.addEventListener("click", () => {
-        let randIamges = images[Math.floor(Math.random() * images.length)];
-        let randText = texts[Math.floor(Math.random() * texts.length)];
-        let randBorder = borders[Math.floor(Math.random() * borders.length)];
-        img.src = randIamges;
-        h2.innerText = randText;
-        img.style.border = `10px solid ${randBorder}`;
-      });
+      }
+
+      // multiple events ek hi line mein assign karo
+      ["mouseover", "click"].forEach((evt) =>
+        img.addEventListener(evt, changeRandom)
+      );
+      btn.addEventListener("click", changeRandom);
+
       img.addEventListener("mouseleave", () => {
         img.src = pre_src;
         h2.innerText = pre_text;
