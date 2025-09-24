@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  background-color: whitesmoke;
+  color: black;
+}
+footer a:hover {
+  color: #ffc107; /* yellow color on hover */
+  text-decoration: underline; /* underline on hover */
+  transition: 0.3s; /* smooth effect */
+}
+#search:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: none; /* Remove Bootstrap shadow */
+  border-color: #0d6efd; /* Optional: custom border color on focus */
+}
+.hover-scale {
+  transition: transform 0.8s ease-in-out; /* Smooth transition */
+}
+
+.hover-scale:hover {
+  transform: scale(1.1); /* Shrinks image on hover */
+}
+.btn-hover:hover {
+  transform: scale(0.8); /* Shrinks image on hover */
+  background-color: #ffc107;
+  color: #000;
+}
+
+/* Quick Links hover - text yellow */
+.link-hover:hover {
+  color: #ffc107 !important; /* Bootstrap yellow */
+}
+
+/* Social icons hover - scale */
+.icon-hover i {
+  transition: transform 0.3s ease;
+}
+.icon-hover:hover i {
+  transform: scale(1.2);
+  color: #ffc107; /* optional: icon bhi yellow ho */
+}
